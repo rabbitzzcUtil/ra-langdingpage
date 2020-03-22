@@ -42,6 +42,7 @@
 
  本篇README.md面向开发者
  
+
 ## 目录
 
 - [上手指南](#上手指南)
@@ -147,6 +148,13 @@ xxx@xxxx
 
  *您也可以在贡献者名单中参看所有参与该项目的开发者。*
 
+### 备注
+考虑到`anmate.css`只有固定的几十种效果，同时比较了anime.js与animate.css[animate.css-vs-animejs](https://www.npmtrends.com/animate.css-vs-animejs)
+![https://cdn.img.wenhairu.com/images/2020/03/22/qRSzt.md.png](https://cdn.img.wenhairu.com/images/2020/03/22/qRSzt.md.png)
+
+下载量基本是是3倍之差，使用人数确实稍低，但npm的大小是区别不大；且js能更好的定制动画，为后续平台的扩展有更大的好处，因此使用`anime.js`
+
+
 ### 版权说明
 
 该项目签署了MIT 授权许可，详情请参阅 [LICENSE.txt](https://github.com/shaojintian/Best_README_template/blob/master/LICENSE.txt)
@@ -154,12 +162,12 @@ xxx@xxxx
 ### 鸣谢
 
 
-- [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
-- [Img Shields](https://shields.io)
+- [initialize.scss](https://github.com/jeroenoomsNL/initialize-css/blob/master/src/styles/initialize.scss)
+- [https://animejs.com/documentation/#round](https://animejs.com/documentation/#round)
 - [Choose an Open Source License](https://choosealicense.com)
 - [GitHub Pages](https://pages.github.com)
-- [Animate.css](https://daneden.github.io/animate.css)
-- [xxxxxxxxxxxxxx](https://connoratherton.com/loaders)
+- [Animate.css](https://daneden.github.io/animate.css/)
+- [css-loaders](https://projects.lukehaas.me/css-loaders/)
 
 <!-- links -->
 [your-project-path]:shaojintian/Best_README_template
