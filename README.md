@@ -155,6 +155,11 @@ xxx@xxxx
 下载量基本是是3倍之差，使用人数确实稍低，但npm的大小是区别不大；且js能更好的定制动画，为后续平台的扩展有更大的好处，因此使用`anime.js`
 
 
+https://github.com/sindresorhus/on-change/blob/master/bench/main.bench.js
+
+`onchange()` 函数使用 Proxy 来判断对象变化
+
+
 ### 版权说明
 
 该项目签署了MIT 授权许可，详情请参阅 [LICENSE.txt](https://github.com/shaojintian/Best_README_template/blob/master/LICENSE.txt)
@@ -168,6 +173,10 @@ xxx@xxxx
 - [GitHub Pages](https://pages.github.com)
 - [Animate.css](https://daneden.github.io/animate.css/)
 - [css-loaders](https://projects.lukehaas.me/css-loaders/)
+- [https://img.wenhairu.com/](https://img.wenhairu.com/) 免费图片托管功能s
+- [https://scrollrevealjs.org/](https://scrollrevealjs.org/)
+- [https://brandmark.io/](https://brandmark.io/) logo design
+- [https://carrd.co/build?t=ebb7acb95e5ba2d42b1ec23aeadea63c](https://carrd.co/build?t=ebb7acb95e5ba2d42b1ec23aeadea63c) 类似网站
 
 <!-- links -->
 [your-project-path]:shaojintian/Best_README_template
@@ -186,4 +195,7 @@ xxx@xxxx
 
 
 
+---
 
+是否考虑出一个 Electron 版本的呢？？
+走一步  ---->  看一步
