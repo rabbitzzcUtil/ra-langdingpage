@@ -10,6 +10,7 @@
             :name="open ? 'ellipsis-horizontal-outline' :'ellipsis-vertical-outline'"
             class="open-icon"
             @click="openChange"
+            :style="openIconStyle"
           ></ion-icon>
         </transition>
       </div>
@@ -59,7 +60,14 @@ export default {
         // height: document.body.offsetHeight || document.documentElement.clientHeight,
         left: this.left ? 0 : 'none',
         right: !this.left ? 0 : 'none',
-        // 'text-align': this.open ? 'inherit' : 'center',
+        'border-left': this.left ? 'none' : '1px solid #8f8f92',
+        'border-right': !this.left ? 'none' : '1px solid #8f8f92',
+
+      };
+    },
+    openIconStyle() {
+      return {
+        float: this.left ? 'right' : 'left',
       };
     },
   },
@@ -74,22 +82,19 @@ export default {
 <style lang="scss" scoped>
 .sidebar-menu {
   width: 300px;
-  height: 100%;
-  background: #fcf8f3;
-  // position: fixed;
-  // top: 0;
+  background: #1c1c21;
+  color: #8f8f92;
   padding: 10px;
   transition: width 0.4s ease-in-out;
   .sidebar-menu-header {
-    // text-align: center;
     .open-icon {
       cursor: pointer;
     }
-    margin-bottom: 10px;
+
+    margin-bottom: 30px;
   }
   .sidebar-menu-content {
     height: 60%;
-    background: lightblue;
   }
 }
 </style>

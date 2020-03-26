@@ -1,5 +1,6 @@
 <template>
   <div class="ra-main">
+    核心嘻嘻嘻
     <!-- <vue-sidebar-menu></vue-sidebar-menu> -->
     <!-- <sidebar-menu :menu="menu"></sidebar-menu> -->
   </div>
@@ -40,6 +41,7 @@ export default {
 @import "@/style/scss/var.scss";
 
 .ra-main {
+  color: lightgreen;
   flex:1;
   background: $mainBg;
 }

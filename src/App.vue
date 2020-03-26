@@ -1,11 +1,15 @@
 <template>
   <div id="app">
+    <ra-header></ra-header>
     <div class="center">
-      <ra-header></ra-header>
+      <raSidebarMenu
+        left
+        :width="200"
+      ></raSidebarMenu>
       <ra-main></ra-main>
-      <ra-footer></ra-footer>
+      <raSidebarMenu :width="260"></raSidebarMenu>
     </div>
-    <raSidebarMenu></raSidebarMenu>
+    <!-- <ra-footer></ra-footer> -->
   </div>
 </template>
 
@@ -29,7 +33,7 @@ export default {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: #2c3e50;
+  color: #fff;
 }
 
 html,
@@ -39,12 +43,18 @@ body {
 #app {
   min-height: 100%;
   display: flex;
+  flex-direction: column;
   .center {
+    min-height: 100%;
     text-align: right;
     min-height: 100%;
     flex: 1;
     display: flex;
-    flex-direction: column;
+  }
+  ion-icon {
+    cursor: pointer;
+    font-size: 16px;
+    margin: 0 5px;
   }
 }
 </style>
