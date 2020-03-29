@@ -1,38 +1,59 @@
 <template>
-  <div class="ra-main">
+  <div
+    class="ra-main"
+    id="raMain"
+  >
     核心嘻嘻嘻
-    <!-- <vue-sidebar-menu></vue-sidebar-menu> -->
-    <!-- <sidebar-menu :menu="menu"></sidebar-menu> -->
+    <ion-icon
+      class="icon-contract"
+        name="contract-outline"
+        v-if="fullscreen"
+        @click.stop="exitFullscreen"
+      ></ion-icon>
   </div>
 </template>
 
 <script>
+import { launchFullscreen, exitFullscreen } from '@/utils/fullscreen';
 
 export default {
   name: 'RaMain',
   data() {
     return {
-      menu: [
-        {
-          header: true,
-          title: 'Main Navigation',
-          hiddenOnCollapse: true,
-        },
-        {
-          title: 'Dashboard',
-          icon: 'fa fa-user',
-        },
-        {
-          title: 'Charts',
-          icon: 'fa fa-chart-area',
-          child: [
-            {
-              title: 'Sub Link',
-            },
-          ],
-        },
-      ],
+      fsObj: null,
     };
+  },
+  computed: {
+    fullscreen() {
+      return this.$store.getters.getFullscreen;
+    },
+  },
+  watch: {
+    fullscreen(val) {
+      if (val) {
+        const $raMain = document.getElementById('raMain');
+        launchFullscreen($raMain);
+      }
+    },
+  },
+  mounted() {
+    this.fsObj = document.addEventListener('fullscreenchange', () => {
+      // document.fullscreenEnabled || window.fullScreen ||
+      // document.webkitIsFullScreen || document.msFullscreenEnabled
+      if (document.fullscreenElement) {
+        console.log('进入全屏');
+      } else {
+        console.log('退出全屏');
+        this.$store.dispatch('setFullScreen', false);
+      }
+    });
+  },
+  methods: {
+    exitFullscreen,
+  },
+  beforeDestroy() {
+    document.removeEventListener('fullscreenchange', this.fsObj);
+    this.fsObj = null;
   },
 };
 </script>
@@ -41,8 +62,17 @@ export default {
 @import "@/style/scss/var.scss";
 
 .ra-main {
-  color: lightgreen;
-  flex:1;
+  flex: 1;
   background: $mainBg;
+  padding: 30px;
+  color: $footerBg;
+  .icon-contract {
+    position:fixed;
+    top: 10px ;
+    right: 10px;
+    font-size: 20px !important;
+    color: #313135;
+  }
+
 }
 </style>

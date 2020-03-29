@@ -3,7 +3,6 @@
     class="sidebar-menu"
     :style="sidebarMenuStyle"
   >
-    <slot name="header">
       <div class="sidebar-menu-header">
         <transition>
           <ion-icon
@@ -14,6 +13,8 @@
           ></ion-icon>
         </transition>
       </div>
+    <slot name="header">
+      <div>{{title}}</div>
     </slot>
     <slot name="content">
       <div class="sidebar-menu-content">
@@ -21,7 +22,7 @@
       </div>
     </slot>
     <slot name="bottom">
-      2
+      展示一些bottom细节
     </slot>
   </div>
 </template>
@@ -36,6 +37,10 @@ export default {
     left: {
       type: Boolean,
       default: false,
+    },
+    title: {
+      type: String,
+      default: '头部',
     },
   },
   watch: {
