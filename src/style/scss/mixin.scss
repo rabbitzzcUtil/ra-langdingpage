@@ -1,0 +1,40 @@
+// 默认主题的变量集合
+// https://blog.csdn.net/mate_ge/article/details/89279436
+
+// https://blog.csdn.net/qq_37899792/article/details/94006136
+$default-theme : (base-color: #1c1c21,
+    text-color:#fff, );
+
+
+// 白色主题
+$light-theme : (base-color: #fff,
+    text-color: #313135, );
+
+$themes: ( // key为主题  value为主题的变量集合
+    default-theme: $default-theme,
+    light-theme: $light-theme);
+
+
+// 背景色 mixins
+@mixin base-background() {
+
+    // key value  themes
+    @each $themename,
+    $theme in $themes {
+        [data-theme='#{$themename}'] & {
+            // 对象         //key         输出对象中key的值
+            background-color: map-get($map: $theme, $key: base-color);
+        }
+    }
+}
+
+// 字体颜色 mixins
+@mixin text-color() {
+
+    @each $themename,
+    $theme in $themes {
+        [data-theme='#{$themename}'] & {
+            color: map-get($map: $theme, $key: text-color) !important;
+        }
+    }
+}

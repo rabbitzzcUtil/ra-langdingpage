@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="app" :data-theme="theme">
     <ra-header></ra-header>
     <div class="center">
       <raSidebarMenu
@@ -16,13 +16,18 @@
 <script>
 import raHeader from '@/components/layout/ra-header.vue';
 import raMain from '@/components/layout/ra-main.vue';
-import raFooter from '@/components/layout/ra-footer.vue';
+// import raFooter from '@/compsonents/layout/ra-footer.vue';
 import raSidebarMenu from '@/components/sidebar-menu/index.vue';
 
 export default {
   name: 'App',
   components: {
-    raHeader, raMain, raFooter, raSidebarMenu,
+    raHeader, raMain, raSidebarMenu,
+  },
+  computed: {
+    theme() {
+      return this.$store.getters.getTheme;
+    },
   },
 };
 </script>
@@ -39,6 +44,9 @@ export default {
 html,
 body {
   height: 100%;
+}
+* {
+  transition: background 0.4s ease-in-out;
 }
 #app {
   min-height: 100%;

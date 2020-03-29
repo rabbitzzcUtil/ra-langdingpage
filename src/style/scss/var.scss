@@ -1,13 +1,10 @@
-// 布局区域的背景颜色
+
+@import './mixin.scss';
+ 
+
 $headerBg: #1c1c21;
 $mainBg: #fff;
 $footerBg: #204051;
 
 
 /** border style */
-
-
-
-// size
-$appSidebarContentWidth: 200px;
-$appSidebarEditorWidth: 260px;

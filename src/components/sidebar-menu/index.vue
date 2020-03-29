@@ -80,12 +80,13 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import "@/style/scss/mixin.scss";
 .sidebar-menu {
   width: 300px;
-  background: #1c1c21;
-  color: #8f8f92;
+  @include base-background();
   padding: 10px;
-  transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out,background 0.4s ease-in-out;
+  @include text-color();
   .sidebar-menu-header {
     .open-icon {
       cursor: pointer;
