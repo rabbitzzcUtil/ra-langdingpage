@@ -13,15 +13,16 @@
           ></ion-icon>
         </transition>
       </div>
-    <slot name="header">
+    <slot name="header" v-if="open">
       <div>{{title}}</div>
+      <hr>
     </slot>
-    <slot name="content">
+    <slot name="content" v-if="open">
       <div class="sidebar-menu-content">
         展示模块区域
       </div>
     </slot>
-    <slot name="bottom">
+    <slot name="bottom" v-if="open">
       展示一些bottom细节
     </slot>
   </div>

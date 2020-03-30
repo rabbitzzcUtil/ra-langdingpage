@@ -1,13 +1,13 @@
 <template>
-  <div id="app" :data-theme="theme">
+  <div
+    id="app"
+    :data-theme="theme"
+  >
     <ra-header></ra-header>
     <div class="center">
-      <raSidebarMenu
-        left
-        :width="200"
-      ></raSidebarMenu>
+      <side-left></side-left>
       <ra-main></ra-main>
-      <raSidebarMenu :width="260"></raSidebarMenu>
+      <side-right></side-right>
     </div>
     <!-- <ra-footer></ra-footer> -->
   </div>
@@ -16,13 +16,17 @@
 <script>
 import raHeader from '@/components/layout/ra-header.vue';
 import raMain from '@/components/layout/ra-main.vue';
+import sideLeft from '@/components/layout/side-left.vue';
+import sideRight from '@/components/layout/side-right.vue';
 // import raFooter from '@/compsonents/layout/ra-footer.vue';
-import raSidebarMenu from '@/components/sidebar-menu/index.vue';
 
 export default {
   name: 'App',
   components: {
-    raHeader, raMain, raSidebarMenu,
+    raHeader,
+    raMain,
+    sideLeft,
+    sideRight,
   },
   computed: {
     theme() {
@@ -47,22 +51,21 @@ body {
 }
 * {
   transition: background 0.4s ease-in-out;
+  font-size: 12px;
+  box-sizing:border-box;
 }
+// body::-webkit-scrollbar {
+//   display: none;
+// }
 #app {
   min-height: 100%;
   display: flex;
   flex-direction: column;
   .center {
     min-height: 100%;
-    text-align: right;
     min-height: 100%;
     flex: 1;
     display: flex;
-  }
-  ion-icon {
-    cursor: pointer;
-    font-size: 16px;
-    margin: 0 5px;
   }
 }
 </style>

@@ -77,6 +77,11 @@ export default {
 @import "@/style/scss/mixin.scss";
 
 .ra-header {
+  ion-icon {
+    cursor: pointer;
+    font-size: 16px;
+    margin: 0 5px;
+  }
   width: 100%;
   height: 44px;
   line-height: 44px;
