@@ -100,3 +100,4 @@ yarn start
 - [ ] 支持 VUE 组件导出
 - [ ] 增加块组件
 - [ ] 支持代码可编辑
+- [ ] LandingPage 动画嵌入
