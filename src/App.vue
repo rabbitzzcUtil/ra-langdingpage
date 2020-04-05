@@ -3,30 +3,19 @@
     id="app"
     :data-theme="theme"
   >
-    <ra-header></ra-header>
-    <div class="center">
-      <side-left></side-left>
-      <ra-main></ra-main>
-      <side-right></side-right>
-    </div>
-    <!-- <ra-footer></ra-footer> -->
+    <raGrape></raGrape>
   </div>
 </template>
 
 <script>
-import raHeader from '@/components/layout/ra-header.vue';
-import raMain from '@/components/layout/ra-main.vue';
-import sideLeft from '@/components/layout/side-left.vue';
-import sideRight from '@/components/layout/side-right.vue';
-// import raFooter from '@/compsonents/layout/ra-footer.vue';
+
+// eslint-disable-next-line import/no-unresolved
+import raGrape from '@/components/layout/ra-grape.vue';
 
 export default {
   name: 'App',
   components: {
-    raHeader,
-    raMain,
-    sideLeft,
-    sideRight,
+    raGrape,
   },
   computed: {
     theme() {
@@ -52,7 +41,7 @@ body {
 * {
   transition: background 0.4s ease-in-out;
   font-size: 12px;
-  box-sizing:border-box;
+  box-sizing: border-box;
 }
 // body::-webkit-scrollbar {
 //   display: none;

@@ -23,7 +23,6 @@
       </div>
     </slot>
     <slot name="bottom" v-if="open">
-      展示一些bottom细节
     </slot>
   </div>
 </template>
@@ -101,7 +100,7 @@ export default {
     margin-bottom: 30px;
   }
   .sidebar-menu-content {
-    height: 60%;
+    height: 100%;
   }
 }
 </style>
