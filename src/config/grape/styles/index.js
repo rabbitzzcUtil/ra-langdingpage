@@ -5,14 +5,10 @@
  */
 export default (editor, config) => {
   const sm = editor.StyleManager;
-
-  const sector = sm.getSector('mySector');
-  console.log(sector, sm);
   const csm = config.customStyleManager;
 
   // 样式管理器
   // 获取样式并重置
-  console.log(sm.getSectors());
   sm.getSectors().reset(csm && csm.length ? csm : [{
     // 基本样式
     name: config.textGeneral,

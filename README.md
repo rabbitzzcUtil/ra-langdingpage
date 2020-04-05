@@ -14,7 +14,7 @@
 <br />
 
 <p align="center">
-  <a href="https://github.com/shaojintian/Best_README_template/">
+  <a href="https://github.com/ra-utility/ra-langdingpage">
     <img src="./src/assets/logo/ldp.png" alt="Logo" width=100" height="100">
   </a>
 
@@ -25,11 +25,11 @@
     <!-- <a href="https://github.com/shaojintian/Best_README_template"><strong>探索本项目的文档 »</strong></a> -->
     <br />
     <br />
-    <a href="https://github.com/shaojintian/Best_README_template">查看Demo</a>
+    <!-- <a href="https://github.com/shaojintian/Best_README_template">查看Demo</a>
     ·
     <a href="https://github.com/shaojintian/Best_README_template/issues">报告Bug</a>
     ·
-    <a href="https://github.com/shaojintian/Best_README_template/issues">提出新特性</a>
+    <a href="https://github.com/shaojintian/Best_README_template/issues">提出新特性</a> -->
   </p>
 
 </p>
@@ -38,7 +38,7 @@
 
 ## 目录
 
-- [页面](#页面)
+- [demo](#demo)
 - [上手指南](#上手指南)
   - [环境要求](#环境要求)
   - [安装步骤](#安装步骤)
@@ -47,9 +47,12 @@
 - [部署](#部署)
 - [使用到的框架](#使用到的框架)
 - [鸣谢](#鸣谢)
+- [TODO](#TODO)
 
-### 页面
+### demo
 ![](./src/assets/demo.png)
+
+* [demo](https://ra-langdingpage.logiczc.now.sh/)
 
 ### 上手指南
 
@@ -91,3 +94,9 @@ yarn start
 - [animeJs](https://animejs.com/documentation/#round)
 - [Animate.css](https://daneden.github.io/animate.css/)
 - [Now](https://zeit.co/)
+
+### TODO
+- [ ] 支持暗黑主题
+- [ ] 支持 VUE 组件导出
+- [ ] 增加块组件
+- [ ] 支持代码可编辑

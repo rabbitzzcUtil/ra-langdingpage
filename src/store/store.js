@@ -45,7 +45,6 @@ const store = new Vuex.Store({
       state.fullscreen = fullscreen;
     },
     setEditor(state, editor) {
-      console.log(editor);
       state.editor = editor;
     },
   },
